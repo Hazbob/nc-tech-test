@@ -1,5 +1,5 @@
 import {Request, Response, NextFunction} from "express";
-import {fetchAllCards, fetchAllCardTemplates} from "../models/cardModel";
+import {fetchAllCards, fetchAllCardTemplates, fetchCardById} from "../models/cardModel";
 import {Cards, Template} from "../types/cardTypes";
 
 
@@ -26,6 +26,18 @@ export async function handleFetchCards  (req: Request, res: Response, next: Next
 
 
     res.status(200).json({cards: formattedCards})
+    }catch (error){
+        next(error)
+    }
+}
+
+export async function handleFetchCardById (req: Request, res: Response, next: NextFunction){
+    try{
+
+    const {id} = req.params
+
+    const card = await fetchCardById(id)
+    res.status(200).json({card: card})
     }catch (error){
         next(error)
     }

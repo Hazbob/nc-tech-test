@@ -13,7 +13,7 @@ export interface Cards {
 
 export interface Template {
     id: string
-        width: number
+    width: number
     height: number
     imageUrl: string
 }
