@@ -24,10 +24,11 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "express-validator": "^7.0.1"
+    "express-validator": "^7.0.1",
+    "node-cache": "^5.1.2"
   },
   "scripts": {
     "dev": "nodemon src/index.ts",
-    "test": "jest --coverage --watch"
+    "test": "jest  --watch"
   }
 }
