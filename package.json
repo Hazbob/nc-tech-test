@@ -21,7 +21,8 @@
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-validator": "^7.0.1"
   },
   "scripts": {
     "dev": "nodemon src/index.ts",
